@@ -4,13 +4,6 @@ sudo: false
 language: node_js
 node_js:
   - "node"
-  
-addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
 
 cache:
   yarn: true
@@ -26,5 +19,5 @@ script:
   - echo asdsadsdasd
   - node test.js
   - export CHROME_BIN=chromium-browser
-  - yarn build
+  - yarn test
   - xvfb-run -a yarn test
